@@ -150,7 +150,8 @@ body {
 }
 
 .right {
-    width: 60%;
+    width: 100%;
+    overflow: auto;
 }
 
 .left-slider {
@@ -328,6 +329,10 @@ body {
     overflow: hidden;
 }
 
+.brands-m {
+    display: none;
+}
+
 .brands-vertical-container {
     display: flex;
     flex-direction: column;
@@ -458,5 +463,98 @@ body {
         width: 100%;
         justify-content: space-between;
     }
+
+    .container {
+        flex-direction: column;
+        position: static;
+    }
+
+    .right-top .second-desc {
+        display: none;
+    }
+
+    .right-top .options {
+        flex-direction: column;
+    }
+ 
+
+    .buttons-container {
+        flex-direction: column;
+    }
+
+    .brands-m {
+
+        gap: 2rem;
+        padding: 0 2rem;
+        margin-top: 1rem;
+        position: relative;
+        max-width: 150vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      
+        
+    }
+
+    .brands {
+        display: none;
+    }
+
+    .shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, black, transparent, black);
 }
 
+   .animation-horizon {
+        animation-name: h-container-animation;
+        animation-duration: 10s;
+        animation-direction: alternate-reverse;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+
+    .animation-alternate {
+        animation-name: h-container-animation;
+        animation-duration: 10s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+    }
+
+    .brands-horizontal-container {
+
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        width: 100%;
+        flex-shrink: 0;
+
+    }
+
+    .brand-item img {
+        width: 150px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        background-color: #dddddd22;
+        border: 1px solid rgba(255, 255, 255, 0.398);
+        border-radius: 1rem;
+    }
+
+ 
+
+    @keyframes h-container-animation {
+        from {
+            transform: translatex(50%);
+        }
+
+        to {
+            transform: translatex(10%);
+        }
+    }
+}
